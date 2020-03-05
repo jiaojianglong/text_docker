@@ -52,6 +52,9 @@ jobs:
 
       - name: Log into registry
         run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login docker.pkg.github.com -u ${{ github.actor }} --password-stdin
+        
+      - name: Login docker
+        run: docker login -u 447151999 -p jiao123456
 
       - name: Push image
         run: docker push 447151999/jiaojianglong:1.1
